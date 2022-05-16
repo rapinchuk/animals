@@ -1,7 +1,43 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1162px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-content__title {
+  font-size: 67px;
+  font-weight: 600;
+}
+.section-content__subtitle {
+  font-size: 29px;
+  font-weight: 400;
+}
+.section-content__btn {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 21px;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 16px 31px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
 .header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   width: 100%;
   background-color: #daac00;
 }
@@ -35,6 +71,14 @@
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 21px;
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  -o-transition: filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+}
+.header__search-input:focus {
+  background-color: brightness(70%);
 }
 .header__search-input::-webkit-input-placeholder {
   color: #ffffff;
@@ -67,19 +111,133 @@
   display: -ms-flexbox;
   display: flex;
   background-color: #00bec9;
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  -o-transition: filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+}
+.header__search-logo:hover {
+  -webkit-filter: drop-shadow(5px 0px 5px #313243);
+          filter: drop-shadow(5px 0px 5px #313243);
 }
 
-body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+.hero {
+  background-color: #fcc302;
+}
+.hero__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 100px 0;
+}
+.hero__img {
+  height: 604px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
-.container {
-  max-width: 1162px;
-  margin: 0 auto;
+.section-content__btn--blue {
+  background-color: #00bec9;
+  margin-right: 30px;
 }
 
-a {
-  text-decoration: none;
+.section-content__btn--void {
+  background-color: none;
+  border: 2px solid #ffffff;
+}
+
+.section-content--hero {
+  margin-top: 85px;
+}
+
+.section-content {
+  color: #ffffff;
+}
+.section-content__title {
+  margin-bottom: 50px;
+}
+.section-content__subtitle {
+  margin-bottom: 50px;
+}
+
+.promo {
+  padding: 140px 0 180px 0;
+}
+.promo__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.promo__video {
+  position: relative;
+  height: 480px;
+  width: 506px;
+}
+.promo__video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fcc302;
+  opacity: 0.7;
+}
+.promo__video::after {
+  content: "";
+  position: absolute;
+  top: 310px;
+  left: -40px;
+  right: 290px;
+  bottom: -35px;
+  background-color: #fcc302;
+  z-index: -1;
+}
+.promo__video-link {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.promo__video-link::after {
+  content: "";
+  top: 0;
+  left: 50%;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translate(-25%, 0);
+      -ms-transform: translate(-25%, 0);
+          transform: translate(-25%, 0);
+  background-color: #daac00;
+  -webkit-clip-path: polygon(74% 50%, -100% 0%, -100% 100%);
+          clip-path: polygon(74% 50%, -100% 0%, -100% 100%);
+}
+
+.section-content__btn--yellow {
+  background-color: #fcc302;
+}
+
+.section-content--promo {
+  padding: 0 90px 0 0;
+  color: black;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.section-content__title--promo {
+  font-size: 50px;
 }

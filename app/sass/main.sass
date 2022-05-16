@@ -1,16 +1,40 @@
-@import 'var','header'
+@import 'var'
 	
 body
-	
 	box-sizing: border-box
 	font-family: 'Poppins', sans-serif
 	
-
+*
+	scroll-behavior: smooth
 
 
 .container
 	max-width: 1162px
 	margin: 0 auto
+	padding: 0 20px
 
 a
 	text-decoration: none
+
+
+
+.section-content 
+
+	&__title
+		font-size: 67px
+		font-weight: 600
+	&__subtitle 
+		font-size: 29px
+		font-weight: 400
+	&__btn 
+		box-sizing: border-box
+		font-size: 21px
+		color: $white
+		font-weight: 600
+		padding: 16px 31px
+		border-radius: 10px
+		display: inline-block
+		
+
+@import 'header','hero','promo'
+
