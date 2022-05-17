@@ -1,0 +1,68 @@
+.promo-2
+    padding: 140px 0 180px 0
+    &__wrap 
+        display: flex
+        align-items: center
+        flex-direction: row-reverse
+
+    &__video 
+        position: relative
+        height: 480px
+        width: 506px
+        margin:  0 90px 0 0
+        background-repeat: no-repeat
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background-color: #fcc302
+            opacity: 0.7
+            
+        &::after
+            content: ""
+            position: absolute
+            top: 310px
+            left: 290px
+            right: -40px
+            bottom: -35px
+            background-color: #fcc302
+            z-index: -1
+
+
+    &__video-link 
+        cursor: pointer
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        height: 85px
+        width: 85px
+        border-radius: 50%
+        background-color: #fff
+        &::after
+            content: ""
+            top: 0
+            left: 50%
+            right: 0
+            position: absolute
+            bottom: 0
+            transform: translate(-25%,0)
+            background-color: #daac00
+            clip-path: polygon(74% 50%, -100% 0%, -100% 100%)
+
+		
+
+
+.section-content__btn--yellow
+    background-color: $accentYellow
+
+.section-content--promo-2
+    text-align: right
+    color: black
+    flex: 1
+
+.section-content__title--promo-2
+    font-size: 50px

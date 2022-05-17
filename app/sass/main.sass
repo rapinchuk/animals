@@ -12,6 +12,7 @@ body
 	max-width: 1162px
 	margin: 0 auto
 	padding: 0 20px
+	overflow: hidden
 
 a
 	text-decoration: none
@@ -34,7 +35,52 @@ a
 		padding: 16px 31px
 		border-radius: 10px
 		display: inline-block
+		transition: box-shadow 0.2s
+		&:hover
+			box-shadow: inset 0px 0px 3px 1px rgba(122,122,122,0.8)
 		
 
-@import 'header','hero','promo'
+
+
+.card-block 
+	
+	&__title 
+		font-size: 75px
+		font-weight: 700
+
+	&__subtitle 
+		padding-top: 55px
+		font-size: 33px
+		font-weight: 400
+	&__item-wrap 
+		padding-top: 100px
+		display: flex
+		justify-content: space-between
+
+	
+
+		
+
+.card 
+	display: flex
+	flex-direction: column
+	& + &
+		margin-left: 50px
+	&__img 
+		width: 342px
+		height: 353px
+		border: 6px solid $white
+
+	&__service-name 
+		padding-top: 55px
+		font-size: 37.5px
+		font-weight: 600
+	&__service-about 
+		padding-top: 30px
+		font-size: 25px
+		font-weight: 400
+
+
+
+@import 'header','hero','promo','services','promo-2','team','statistic','blog','footer'
 
