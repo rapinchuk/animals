@@ -3,13 +3,21 @@
     background-color: $accentYellow
     text-align: center
     padding: 100px 0
+    
+
 
 
 .card 
+    max-width: 354px
+    @include _320
+        max-width: 100%
+    
     &__service-price 
         padding: 40px 0 35px 0
         font-size: 42px
         font-weight: 600
+        @include _320
+            font-size: 100px
     &__service-price--after
         margin-right: 20px
         position: relative
@@ -30,5 +38,8 @@
         margin: 0 auto
         font-size: 25px
         font-weight: 400
+        @include _320
+            font-size: 60px
+            width: 400px
 
 

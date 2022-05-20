@@ -1,19 +1,66 @@
 .header 
     width: 100%
     background-color: $secondYellow
+    @include _1200 
+        position: sticky
+        top: 0
+        z-index: 100
+       
     &__wraper
         height: 121px
         display: flex
         justify-content: space-between
         align-items: center
+    
+
+    &__nav-wraper
+        @include _1200 
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 1000
+            background-color: #000000bd
+            min-height: 100vh
+            min-width: 100vw
+            flex-direction: column-reverse
+            justify-content: center !important
+            
+
+    &__nav
+        @include _1200
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 100px  
+            margin-top: 100px      
     &__nav-item
+        position: relative
         color: $white
         font-family: 'Poppins', sans-serif
         font-weight: 500
         font-size: 29px
+        @include _1200
+            font-size: 70px
+       
+    
+        &::after
+            transition: opacity 0.2s
+            content: ""
+            position: absolute
+            height: 2px
+            background-color: #fff
+            width: 100%
+            bottom:  0%
+            transform: translate(-100%, 0)
+            opacity: 0
+        &:hover
+            &::after
+                opacity: 1
         
         &+&
             margin-left: 30px
+            @include _1200
+                margin-left: 0
        
 
     &__search-input 
@@ -25,6 +72,11 @@
         font-family: 'Poppins', sans-serif
         font-weight: 400
         font-size: 21px
+        @include _1200
+            width: 100%
+            height: auto
+            font-size: 60px
+
 
         &:focus
             background-color: brightness(70%)
@@ -32,8 +84,12 @@
             color: $white
     
     &__search
+        margin-left: 20px
         display: flex
         box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.45)
+        @include _1200
+            width: 70%
+            justify-content: center
         
     &__search-logo
         padding: 14px 24px
@@ -43,7 +99,69 @@
         transition: filter 0.3s
         &:hover
             filter: drop-shadow(5px 0px 5px  $textColor)
+        @include _1200
+            padding: 24px 50px
+            
+
+#header__nav-wraper
+    overflow: auto
+    @include _1200
+        display: none 
+
+.burger
+    z-index: 1000
+    height: 24px
+    cursor: pointer
+    display: none
+    align-items: center
+    @include _1200
+        display: flex
+    span
+        position: relative
+        display: block
+        height: 6px
+        width: 50px
+        background-color: #fff
+        &::before
+            content: ""
+            height: 100%
+            width: 100%
+            background-color: #fff
+            position: absolute
+            top:15px
+            transition-property: top, transform
+            transition: 0.2s
+        &::after
+            content: ""
+            height: 100%
+            width: 100%
+            background-color: #fff
+            position: absolute
+            top:-15px
+            transition-property: top, transform
+            transition: 0.2s
+        &.active
+            background-color: #ffffff00
+            &::before
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%) rotate(45deg)
+            &::after
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%) rotate(-45deg)
+            
             
             
 
 
+
+.header__nav-wraper
+    width: 100%
+    height: 121px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    
+
+@media (max-width: 768px)

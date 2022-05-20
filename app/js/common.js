@@ -129,8 +129,27 @@ window.onload = function(){
 
 
 	
+	//burger
+	let $burger = document.querySelector('.burger')
+	let $burgerSpan = document.querySelector('.burger-span')
+	let $body =	document.querySelector('body')
+	let $menu = document.querySelector('.header__nav-wraper')
+	// let burgerHandle = function(e){
+	// 	burgerSpan.classList.toggle("active")
+	// }
 
 
+	$burger.addEventListener("click", (e)=>{
+		$burgerSpan.classList.toggle("active")
+		if($burgerSpan.classList.contains("active")){
+			$body.style.overflow = "hidden",
+			$menu.style.display = "flex"
+		}
+		else{
+			$body.style.overflow = "auto"
+			$menu.style.display = "none"
+		}
+	});
 
 		  
 

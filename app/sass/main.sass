@@ -1,18 +1,36 @@
-@import 'var'
+@import 'var','mixin'
 	
+
+
+@mixin _320
+	@media (min-device-width: 320px) and (max-device-width: 768px) 
+		@content
+
+@mixin _1200
+	@media (max-width: 1200px)  
+		@content
+
+
+
+
+
+
 body
 	box-sizing: border-box
 	font-family: 'Poppins', sans-serif
 	
+	
 *
 	scroll-behavior: smooth
 
-
+section
+	overflow-x: hidden
 
 .container
 	max-width: 1162px
 	margin: 0 auto
 	padding: 0 20px
+	
 		
 
 a
@@ -25,9 +43,13 @@ a
 	&__title
 		font-size: 67px
 		font-weight: 600
+		@include _320
+			font-size: 100px
 	&__subtitle 
 		font-size: 29px
 		font-weight: 400
+		@include _320
+			font-size: 70px
 	&__btn 
 		box-sizing: border-box
 		font-size: 21px
@@ -37,6 +59,8 @@ a
 		border-radius: 10px
 		display: inline-block
 		transition: box-shadow 0.2s
+		@include _320
+			font-size: 60px
 		&:hover
 			box-shadow: inset 0px 0px 3px 1px rgba(122,122,122,0.8)
 		
@@ -48,38 +72,65 @@ a
 	&__title 
 		font-size: 75px
 		font-weight: 700
+		@include _320
+			font-size: 100px
 
 	&__subtitle 
 		padding-top: 55px
 		font-size: 33px
 		font-weight: 400
+		@include _320
+			font-size: 70px
 	&__item-wrap 
 		padding-top: 100px
 		display: flex
 		justify-content: space-between
-
-	
-
+		row-gap: 70px
+		@include _1200
+			justify-content: center
+			flex-wrap: wrap
+		@include _320
+			flex-direction: column
+			align-items: center
+			
 		
 
 .card 
 	display: flex
 	flex-direction: column
+	@include _320
+		align-items: center
+	
+
 	& + &
 		margin-left: 50px
+		@include _320
+			margin: 0
 	&__img 
 		width: 342px
 		height: 353px
 		border: 6px solid $white
+		@include _320
+			width: 684px
+			height: 706px
+			background-size: contain
+			background-repeat: no-repeat
+		
 
 	&__service-name 
 		padding-top: 55px
 		font-size: 37.5px
 		font-weight: 600
+		@include _320
+			font-size: 70px!important
+			
 	&__service-about 
 		padding-top: 30px
 		font-size: 25px
 		font-weight: 400
+		@include _320
+			font-size: 50px!important
+		
 
 
 

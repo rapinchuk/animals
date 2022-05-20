@@ -5,8 +5,14 @@
     &__wrap 
         display: flex
         justify-content: space-between
+        @include _320
+            flex-direction: column-reverse
+            align-items: center
     &__search-input
         width: 100%
+       
+        
+
 		
 
 
@@ -15,6 +21,10 @@
     &__title 
         font-size: 37.5px
         font-weight: 600
+        @include _320
+            font-size: 75px
+            margin-top: 100px
+            text-decoration: underline
 
     &__tist 
         list-style: none
@@ -24,6 +34,10 @@
         font-size: 25px
         font-weight: 400
         line-height: 44px
+        @include _320
+            font-size: 50px
+            line-height: 100px
+
         & a 
             transition: color 0.2s
             color: $white
@@ -34,20 +48,31 @@
 
 .footer-social 
     text-align: right
+    @include _320
+        text-align: center
     &__title 
         font-size: 37.5px
         font-weight: 600
         line-height: 8px
+        @include _320
+            font-size: 63px
+             
 		
 
     &__subtitle 
         font-size: 25px
         font-weight: 400
         line-height: 33px
+        @include _320
+            font-size: 50px
+            line-height: 66px
 
     &__search
         justify-content: flex-end
         box-shadow: none
+        @include _320
+            margin: 0
+            width: auto
 		
 
     &__icons
@@ -55,6 +80,8 @@
         display: flex
         justify-content: flex-end
         gap: 15px
+        @include _320
+            justify-content: center
     &__icons-item
         display: block
         height: 45px

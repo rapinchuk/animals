@@ -1,13 +1,28 @@
 .hero
     background-color: $accentYellow
+  
+
 
     &__wrap
         display: flex
         padding: 100px 0
+        align-items: center
+        align-content: center
+        justify-content: center
+        @include _1200
+            position: relative
+            flex-direction: column
+        
+           
+          
     &__img
         // transform: translate(-100%, 20%)
+        @include _1200
+            position: absolute
+            right: 0
+            z-index: -1
         height: 604px
-        width: 100%
+        min-width: 419px
         background-position: center center
         background-repeat: no-repeat
 
@@ -32,3 +47,5 @@
         margin-bottom: 50px
     &__subtitle 
         margin-bottom: 50px
+
+

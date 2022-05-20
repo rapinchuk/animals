@@ -5,16 +5,25 @@
         width: 361px
         height: 351px
         border: none
+        @include _320
+            width: 100%
+            height: 451px
+            background-position: center center
+            background-repeat: no-repeat
+            background-size: contain
     &__icons
         display: flex
         justify-content: center
         gap: 15px
+        @include _320
+            gap: 30px
     &__icons-item
         
         display: block
         height: 35px
         width: 35px
         background-image: url(../img/icon-sprite.png)
+             
         &:hover
             background-position-y: -35px !important
 

@@ -20,27 +20,33 @@
 					</a>
 									  
 				</div>
-				<nav class="header__nav">
-					<a href="#" class="header__nav-item">Home</a>
-					<a href="#" class="header__nav-item">About</a>
-					<a href="#" class="header__nav-item">Service</a>
-					<a href="#" class="header__nav-item">Contact</a>
-				</nav>
-				<div class="header__search">
-					<input class="header__search-input" type="text" name="search" id="" placeholder="Search..">
-					<a class="header__search-logo" href="#">
-						<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
-							<defs>
-							<style>
-								.cls-1 {
-								fill: #fff;
-								fill-rule: evenodd;
-								}
-							</style>
-							</defs>
-							<path id="Search_Button" data-name="Search Button" class="cls-1" d="M22.859,21.5l-6.681-6.681a9.121,9.121,0,1,0-1.355,1.355L21.5,22.859a0.479,0.479,0,0,0,.678,0l0.678-.678A0.479,0.479,0,0,0,22.859,21.5ZM9.1,16.291A7.188,7.188,0,1,1,16.291,9.1,7.2,7.2,0,0,1,9.1,16.291Z"/>
-						</svg>
-					</a>
+				<div class="header__nav-wraper" id="header__nav-wraper">
+					<nav class="header__nav">
+						<a href="#" class="header__nav-item">Home</a>
+						<a href="#" class="header__nav-item">About</a>
+						<a href="#" class="header__nav-item">Service</a>
+						<a href="#" class="header__nav-item">Contact</a>
+					</nav>
+					<div class="header__search">
+						<input class="header__search-input" type="text" name="search" id="" placeholder="Search..">
+						<a class="header__search-logo" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+								<defs>
+								<style>
+									.cls-1 {
+									fill: #fff;
+									fill-rule: evenodd;
+									}
+								</style>
+								</defs>
+								<path id="Search_Button" data-name="Search Button" class="cls-1" d="M22.859,21.5l-6.681-6.681a9.121,9.121,0,1,0-1.355,1.355L21.5,22.859a0.479,0.479,0,0,0,.678,0l0.678-.678A0.479,0.479,0,0,0,22.859,21.5ZM9.1,16.291A7.188,7.188,0,1,1,16.291,9.1,7.2,7.2,0,0,1,9.1,16.291Z"/>
+							</svg>
+						</a>
+					</div>
+					
+				</div>
+				<div class="burger">
+					<span class="burger-span"></span>
 				</div>
 			</div>
 		</div>
@@ -86,7 +92,7 @@
 						suffered alteration in some form.</div>
 					<div class="card-block__item-wrap ">
 						<div class="card-block__item card card-1">
-							<div class="card__img" style="background: url(img/service1.png) center center no-repeat;"></div>
+							<div class="card__img" style="background-image: url(img/service1.png) ;"></div>
 							<div class="card__service-name">Veterinarian</div>
 							<div class="card__service-about"> Lorem Ipsum available, but
 								the majority have suffered
@@ -267,7 +273,7 @@
 							</div>
 						</div>
 						<div class="card-block__item card card-blog">
-							<div class="card__img" style="background-image: url(img/blog2.jpg);"></div>
+							<div class="card__img card-blog" style="background-image: url(img/blog2.jpg);"></div>
 							<div class="card__text blog-text">
 								<span class="blog-text__title">
 									As a veterinarian and lover of animals
